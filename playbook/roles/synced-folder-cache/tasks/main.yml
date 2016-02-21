@@ -1,0 +1,4 @@
+---
+
+- name: Unpack inotify-tools-3.14.tar.gz
+  unarchive: src=tmp/inotify-tools-3.14.tar.gz dest=/tmp
