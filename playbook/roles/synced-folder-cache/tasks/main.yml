@@ -1,4 +1,12 @@
 ---
 
-- name: Unpack inotify-tools-3.14.tar.gz
+# @todo: These files are from http://jensd.be/248/linux/use-inotify-tools-on-centos-7-or-rhel-7-to-watch-files-and-directories-for-events
+# Why aren't there inotify tools for Centos?
+# What would be the proper source?
+- name: Unpack inotify-tools-3.14.tar.gz, I've already built the source.
   unarchive: src=tmp/inotify-tools-3.14.tar.gz dest=/tmp
+
+- name: Install inotify-tools
+  command: make install
+  args:
+    chdir: /tmp/inotify-tools-3.14/
